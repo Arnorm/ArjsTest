@@ -1,7 +1,8 @@
+console.log("In Coordinates js");
+
 function geoFindMe() {
 
   const status = document.querySelector('#status');
-  console.log("In Coordinates js");
   
   const mapLink = document.querySelector('#map-link');
 
