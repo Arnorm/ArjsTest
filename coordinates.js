@@ -18,5 +18,6 @@ var options = {
     console.warn(`ERREUR (${err.code}): ${err.message}`);
   }
   
+  console.log("right before navigator geoloc");
   navigator.geolocation.getCurrentPosition(success, error, options);
   
