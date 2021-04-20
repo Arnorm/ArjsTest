@@ -1,9 +1,12 @@
+// DOES NOT WORK FOR NOW BUT LETS KEEP IT //
+
+/* 
 var options = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0
   };
-  
+
   function success(pos) {
     var crd = pos.coords;
   
@@ -17,7 +20,10 @@ var options = {
     console.log("Ici on a un pb ...");
     console.warn(`ERREUR (${err.code}): ${err.message}`);
   }
+  */
+
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
   
-  console.log("right before navigator geoloc");
-  navigator.geolocation.getCurrentPosition(success, error, options);
-  
+  console.log("The coordinates script :");  
+  console.log(lat,long);
