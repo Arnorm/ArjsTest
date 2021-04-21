@@ -1,34 +1,19 @@
-console.log("In Coordinates js");
+const log = console.log;
+    window.onload = () => {
+      let scene = document.querySelector('a-scene'); /* Apply to whole scene */
 
-function geoFindMe() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          let gps = document.createAttribute('gps-entity-place'),
+            arjs = document.createAttribute('arjs'),
+            welcome = document.getElementById('welcome');
 
-  const status = document.querySelector('#status');
-  
-  const mapLink = document.querySelector('#map-link');
+          arjs.value = 'sourceType: webcam; sourceWidth: 1280; sourceHeight: 960; trackingMethod: best; debugUIEnabled: false;';
+          gps.value = `latitude: ${position.coords.latitude - 0.001}; longitude: ${position.coords.longitude + 0.001}`;
+          log(gps.value);
+          scene.setAttributeNode(gps); /* Apply to whole scene */
+          scene.setAttributeNode(arjs);
+        });
+      }
 
-  mapLink.href = '';
-  mapLink.textContent = '';
-
-  function success(position) {
-    const latitude  = position.coords.latitude;
-    const longitude = position.coords.longitude;
-
-    status.textContent = '';
-    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-  }
-
-  function error() {
-    status.textContent = 'Unable to retrieve your location';
-  }
-
-  if (!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
-  } else {
-    status.textContent = 'Locating…';
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-
-}
-
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+    };
