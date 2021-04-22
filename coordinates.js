@@ -8,7 +8,6 @@ const log = console.log;
             welcome = document.getElementById('welcome');
           arjs.value = 'sourceType: webcam; sourceWidth: 1280; sourceHeight: 960; trackingMethod: best; debugUIEnabled: false;';
           gps.value = `latitude: ${position.coords.latitude - 0.001}; longitude: ${position.coords.longitude + 0.001}`;
-          log(gps.value);
           scene.setAttributeNode(gps); 
           scene.setAttributeNode(arjs);
           let box = document.createElement('a-box');
@@ -16,6 +15,10 @@ const log = console.log;
           box.setAttribute('scale', '20 20 20');
           box.setAttribute('color', 'red')
           scene.appendChild(box);
+          log("My position :");
+          log(gps.value);
+          log("Bos position :");
+          log(box.getAttribute('gps-entity-place'));
         });
       }
     };
