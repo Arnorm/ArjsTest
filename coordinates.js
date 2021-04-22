@@ -18,7 +18,8 @@ const log = console.log;
           log("My position :");
           log(gps.value);
           log("Box position :");
-          console.log(JSON.parse(JSON.stringify(box)));
+          console.log(box.getAttribute('gps-entity-place'));
+          console.log(box.getAttribute('color'));
         });
       }
     };
