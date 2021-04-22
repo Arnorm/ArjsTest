@@ -11,6 +11,11 @@ const log = console.log;
           log(gps.value);
           scene.setAttributeNode(gps); 
           scene.setAttributeNode(arjs);
+          let box = document.createElement('a-box');
+          box.setAttribute('gps-entity-place', gps.value);
+          box.setAttribute('scale', '20 20 20');
+          box.setAttribute('color', 'red')
+          scene.appendChild(box);
         });
       }
     };
