@@ -17,8 +17,8 @@ const log = console.log;
           scene.appendChild(box);
           log("My position :");
           log(gps.value);
-          log("Bos position :");
-          log(box.getAttribute('gps-entity-place'));
+          log("Box position :");
+          console.log(JSON.parse(JSON.stringify(box)));
         });
       }
     };
