@@ -13,13 +13,12 @@ const log = console.log;
           let box = document.createElement('a-box');
           box.setAttribute('gps-entity-place', 'latitude: ');
           box.setAttribute('scale', '20 20 20');
-          box.setAttribute('color', 'red')
+          box.setAttribute('color', 'red');
+          log("Box position :");
+          console.log(box.getAttribute('gps-entity-place'));
           scene.appendChild(box);
           log("My position :");
           log(gps.value);
-          log("Box position :");
-          console.log(box.getAttribute('gps-entity-place'));
-          console.log(box.getAttribute('color'));
         });
       }
     };
