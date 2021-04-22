@@ -11,8 +11,7 @@ const log = console.log;
           scene.setAttributeNode(gps); 
           scene.setAttributeNode(arjs);
           let box = document.createElement('a-box');
-          box.setAttribute('gps-entity-place', 'latitude: '+position.coords.latitude+
-          '; longitude: '+position.coords.longitude);
+          box.setAttribute('gps-entity-place', 'latitude: ');
           box.setAttribute('scale', '20 20 20');
           box.setAttribute('color', 'red')
           scene.appendChild(box);
