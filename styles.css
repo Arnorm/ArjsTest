@@ -1,8 +1,10 @@
-main_Scene {
+.main_Scene {
   z-index: 0;
+  float: right;
+  width: 50%;
   }
 
-logs {
+.logs {
   position: absolute;
   top: 8px;
   left: 16px;
