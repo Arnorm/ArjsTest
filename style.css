@@ -1,5 +1,9 @@
 .main_Scene {
   z-index: 0;
+  flex-grow: 1;
+  border: none;
+  margin: 0; 
+  padding: 0;
   }
 
 .logs {
