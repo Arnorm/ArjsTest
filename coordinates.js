@@ -20,6 +20,9 @@ const log = console.log;
           scene.appendChild(box);
           log("My position :");
           log(position.coords);
+
+          var displayed_Logs = document.getElementById('logs');
+          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude}`;
         });
       }
     };

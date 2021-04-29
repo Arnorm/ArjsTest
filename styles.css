@@ -1,0 +1,11 @@
+main_Scene {
+  z-index: 0;
+  }
+
+logs {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  z-index: 1;
+}
