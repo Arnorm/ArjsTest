@@ -11,6 +11,7 @@ const log = console.log;
 
     window.onchange = () => {
       if (navigator.geolocation) {
+        log("Updating position");
         navigator.geolocation.getCurrentPosition(function (position) {
           var displayed_Logs = document.getElementById('logs');
           displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude}`;
