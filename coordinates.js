@@ -4,7 +4,7 @@ const log = console.log;
       if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function (position) {
           var displayed_Logs = document.getElementById('logs');
-          const distanceMessage = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+          const distanceMessage = document.querySelector(".PrimalBox").getAttribute('distanceMsg');
           displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude} and ${distanceMessage}`;
         });
       }
