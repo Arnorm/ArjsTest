@@ -4,8 +4,9 @@ const log = console.log;
       if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function (position) {
           var displayed_Logs = document.getElementById('logs');
-          const distanceMessage = document.getElementById('boxAr').getAttribute('distanceMsg');
-          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude} and ${distanceMessage}`;
+          var ar_Iframe = document.getElementById('arFrame');
+          const distance_Message = ar_Iframe.contentWindow.document.getElementById('boxAr').getAttribute('distanceMsg');
+          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude} and ${distance_Message}`;
         });
       }
     };
