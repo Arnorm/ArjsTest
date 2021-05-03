@@ -4,17 +4,8 @@ const log = console.log;
       if (navigator.geolocation) {
         navigator.geolocation.watchPosition(function (position) {
           var displayed_Logs = document.getElementById('logs');
-          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude}`;
-        });
-      }
-    };
-
-    window.onchange = () => {
-      if (navigator.geolocation) {
-        log("Updating position");
-        navigator.geolocation.watchPosition(function (position) {
-          var displayed_Logs = document.getElementById('logs');
-          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude}`;
+          const distanceMessage = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+          displayed_Logs.innerHTML = `longitude:${position.coords.longitude}; latitude:${position.coords.latitude} and ${distanceMessage}`;
         });
       }
     };
