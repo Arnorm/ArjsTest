@@ -14,12 +14,6 @@
     gps-camera-debug arjs="sourceType: webcam; debugUIEnabled: false;cameraParametersUrl:https://jeromeetienne.github.io/AR.js/data/data/camera_para.dat;" >
         <a-camera gps-camera rotation-reader
         maxDistance=2/>
-        <a-entity>
-            <a-box id="boxAr" color="yellow"
-            gps-entity-place="latitude: 47.2337148; longitude: -1.5814216" 
-            scale="0.3 0.3 0.3" />
-            <a-sphere gps-entity-place="latitude:47.2337248; longitude: -1.5814216; altitude: 91.717"  radius=2 color=red></a-sphere>
-        </a-entity>
         <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
