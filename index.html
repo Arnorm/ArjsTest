@@ -27,8 +27,8 @@
               <input id="lat" type="text" name="latitude" required>
               <label for="longitude"><b>Longitude</b></label>
               <input id="long" type="text" name="longitude" required>
-              <button type="submit" class="btn" onclick="return closeForm(this)">Add object</button>
-              <button type="submit" class="btn cancel" onclick="return closeForm(this)">Close</button>
+              <button type="submit" class="btn" onclick="closeForm(this); return false">Add object</button>
+              <button type="submit" class="btn cancel" onclick="closeForm(this); return false">Close</button>
             </form>
           </div> 
     </div>
