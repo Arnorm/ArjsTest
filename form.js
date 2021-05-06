@@ -3,7 +3,8 @@ function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
   
-function closeForm() {
+function closeForm(form) {
   console.log("closed form");
-  document.getElementById("myForm").style.display = "none";
+  form.submit();
+  window.close();
 } 
