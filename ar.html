@@ -20,15 +20,18 @@
         look-at="[gps-camera]"
 		material="color: yellow"
         scale="10 10 10"
-        gps-entity-place="longitude: -1.581230163219007-0.0002; latitude: 47.233761209189055+0.0004;"
+        gps-entity-place="longitude:2.295006040964578+0.0005 ; latitude:48.87387635804005+0.0005 ;"
       ></a-box>
       <a-box 
         look-at="[gps-camera]"
 		material="color: red"
         scale="10 10 10"
-        gps-entity-place="longitude: -1.581230163219007-0.0001; latitude: 47.233761209189055+0.0004;"
+        gps-entity-place="longitude:2.295006040964578+0.0005 ; latitude:48.87387635804005-0.0005 ;"
       ></a-box>
-      <a-camera gps-camera rotation-reader> </a-camera>
+      <a-camera gps-camera 
+      simulateLatitude=48.87387635804005
+      simulateLongitude=2.295006040964578
+      rotation-reader> </a-camera>
     </a-scene>
 </body>
 </html>
