@@ -3,6 +3,7 @@ const log = console.log;
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(function (position) {
         // Managing logging on the left of the screen
+        geolocation.change({lat: 48.87387635804005, lng: 2.295006040964578});
         var displayed_Logs = document.getElementById('logs');
         var ar_Iframe = document.getElementById('arFrame');
         const distance_Message = ar_Iframe.contentWindow.document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
