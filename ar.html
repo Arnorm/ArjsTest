@@ -14,11 +14,12 @@
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+      >
         <a-box 
             look-at="[gps-camera]"
             material="color: red"
-            scale="10 10 10"
+            scale="100 100 100"
             gps-entity-place="longitude:2.295006040964578+0.0005 ; latitude:48.87387635804005-0.0005 ;"
         ></a-box>
         <a-camera gps-camera 
